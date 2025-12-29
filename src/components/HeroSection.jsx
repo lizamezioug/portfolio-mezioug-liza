@@ -271,7 +271,7 @@ const HeroSection = ({ isDark }) => {
           </button>
 
           <a
-            href="/public/CV EN.pdf"
+            href="/CV.pdf"
             download="MEZIOUG_Liza_CV.pdf"
             className={`group px-8 py-3 rounded-full transition-all duration-300 border-2 ${
               isDark 

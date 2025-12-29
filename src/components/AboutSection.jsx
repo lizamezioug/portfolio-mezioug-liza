@@ -118,7 +118,7 @@ const AboutSection = ({ isDark }) => {
                 {/* Image */}
                 <div className="relative overflow-hidden w-48 h-60 md:w-56 md:h-72 lg:w-64 lg:h-80 rounded-2xl">
                   <img 
-                    src="/public/liza.png" 
+                    src="/liza.png" 
                     alt="Liza Mezioug"
                     className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
                   />
