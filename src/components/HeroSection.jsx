@@ -232,7 +232,7 @@ const HeroSection = ({ isDark }) => {
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
             <span className="bg-gradient-to-r from-pink-400 via-purple-400 to-sky-600 to-pink-200  bg-clip-text text-transparent">
-              Web Developer & AI Engineer
+              AI Engineer & Full-stack Web Developer 
             </span>
           </h1>
 
