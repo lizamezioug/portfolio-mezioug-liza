@@ -1,3 +1,4 @@
+import liza from "../assets/liza.jpg";
 const AboutSection = ({ isDark }) => {
   
 
@@ -9,7 +10,7 @@ const AboutSection = ({ isDark }) => {
     { name: 'Bootstrap', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg' },
     { name: 'Tailwind CSS', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg' },
     { name: 'JavaScript', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg' },
-    
+    { name: 'Laravel', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg' },
     // Mobile Development
     { name: 'Flutter', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg' },
     { name: 'Dart', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg' },
@@ -21,6 +22,7 @@ const AboutSection = ({ isDark }) => {
     { name: 'Python', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg' },
     { name: 'Flask', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg' },
     { name: 'Django', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg' },
+    { name: 'FastAPI', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg' },
     { name: 'Java', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg' },
     { name: 'Firebase', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg' },
     
@@ -38,8 +40,9 @@ const AboutSection = ({ isDark }) => {
     { name: 'NumPy', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg' },
     
     // Tools
-    { name: 'Git', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg' },
-    { name: 'GitHub', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg' },
+    
+    { name: 'Git', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg' }, // ✅ déjà colorée (orange/rouge)
+    { name: 'GitHub', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg' },
   ];
 
   return (
@@ -89,7 +92,7 @@ const AboutSection = ({ isDark }) => {
             <div className="w-full lg:w-1/2 order-1 lg:pl-32">
               <div className={`space-y-5 ${isDark ? 'text-white' : 'text-black'}`}>
                 <p className="text-lg leading-relaxed">
-                  I'm <span className="bg-gradient-to-r from-fuchsia-400 to-pink-500 bg-clip-text text-transparent font-bold">Liza Mezioug</span>, final year student in Intelligent Computer Systems at USTHB, Algiers <span className="bg-gradient-to-r from-fuchsia-400 to-violet-500 bg-clip-text text-transparent font-semibold"> (future AI Engineer)</span> 
+                  I'm <span className="bg-gradient-to-r from-fuchsia-400 to-pink-500 bg-clip-text text-transparent font-bold">Liza Mezioug</span>, Intelligent Computer Systems Engineer <span className="bg-gradient-to-r from-fuchsia-400 to-violet-500 bg-clip-text text-transparent font-semibold"></span> 
                 </p>
 
                 <p className="text-lg leading-relaxed">
@@ -118,7 +121,7 @@ const AboutSection = ({ isDark }) => {
                 {/* Image */}
                 <div className="relative overflow-hidden w-48 h-60 md:w-56 md:h-72 lg:w-64 lg:h-80 rounded-2xl">
                   <img 
-                    src="/liza.png" 
+                    src={liza}
                     alt="Liza Mezioug"
                     className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
                   />
@@ -179,9 +182,11 @@ const AboutSection = ({ isDark }) => {
                         src={skill.icon} 
                         alt={skill.name} 
                         className="w-10 h-10 relative z-10 transition-transform duration-300 group-hover:scale-110" 
-                        style={{ 
-                          filter: (!isDark || skill.name === 'Django' || skill.name === 'Express.js') ? 'invert(1)' : 'none' 
-                        }} 
+                      style={{ 
+                        filter: (skill.name === 'Django' || skill.name === 'Express.js' || skill.name === 'GitHub')
+                        ? (isDark ? 'invert(1)' : 'none')
+                        : 'none'
+                      }}
                       />
                     </div>
                     <span className={`font-medium text-base transition-all duration-300 whitespace-nowrap ${

@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { Calendar, Mail, Download, ChevronDown } from 'lucide-react';
+import cv from "../assets/CV.pdf";
 
 const HeroSection = ({ isDark }) => {
   const canvasRef = useRef(null);
@@ -231,7 +232,7 @@ const HeroSection = ({ isDark }) => {
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
             <span className="bg-gradient-to-r from-pink-400 via-purple-400 to-sky-600 to-pink-200  bg-clip-text text-transparent">
-              Web Developer & AI Future Engineer
+              Web Developer & AI Engineer
             </span>
           </h1>
 
@@ -271,7 +272,7 @@ const HeroSection = ({ isDark }) => {
           </button>
 
           <a
-            href="/CV.pdf"
+            href={cv}
             download="MEZIOUG_Liza_CV.pdf"
             className={`group px-8 py-3 rounded-full transition-all duration-300 border-2 ${
               isDark 
